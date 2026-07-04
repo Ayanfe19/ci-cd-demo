@@ -1,0 +1,14 @@
+{
+  "name": "cicd-is-fun",
+  "version": "1.0.0",
+  "description": "A simple Node app to demonstrate an end-to-end CI/CD pipeline",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
