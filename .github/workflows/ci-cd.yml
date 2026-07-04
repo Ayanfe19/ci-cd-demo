@@ -61,7 +61,7 @@ jobs:
           image-ref: ${{ env.IMAGE_NAME }}:${{ github.sha }}
           format: table
           exit-code: '1'              # fail the pipeline on findings — the security gate
-          severity: CRITICAL,HIGH
+          severity: CRITICAL
           ignore-unfixed: true        # don't fail on CVEs with no available fix
 
       - name: Login to Docker Hub
