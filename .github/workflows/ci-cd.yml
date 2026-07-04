@@ -55,6 +55,11 @@ jobs:
       - name: Build image (local only, not pushed yet)
         run: docker build -t $IMAGE_NAME:${{ github.sha }} .
 
+      - name: Manual Trivy Setup
+        uses: aquasecurity/setup-trivy@v0.2.0
+        with:
+          version: v0.36.0
+
       - name: Scan image with Trivy (container/CVE scanning)
         uses: aquasecurity/trivy-action@0.36.0
         with:
